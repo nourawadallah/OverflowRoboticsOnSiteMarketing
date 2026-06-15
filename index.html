@@ -131,18 +131,18 @@
     }
 
     .hero-scroll {
-      position: absolute;
-      bottom: 32px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-      opacity: 0;
-      animation: fadeUp 1s ease forwards 1.3s;
-    }
+          position: absolute;
+          bottom: 32px;
+          left: 50%; 
+          margin-left: -1px; 
+          z-index: 2;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 8px;
+          opacity: 0;
+          animation: fadeUpScroll 1s ease forwards 1.3s;
+        }
 
     .hero-scroll span {
       color: rgba(255,255,255,0.3);
@@ -161,6 +161,12 @@
       to {
         opacity: 1;
         transform: translateY(0);
+      }
+    }
+    @keyframes fadeUpScroll {
+      to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
       }
     }
     @keyframes scrollPulse {
