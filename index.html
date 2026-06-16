@@ -33,7 +33,6 @@
       overflow-x: hidden;
     }
 
-    /* ── HERO ── */
     .hero {
       position: relative;
       height: 100vh;
@@ -65,7 +64,7 @@
 
     .hero-content {
       position: relative;
-      z-index: 2;
+ z-index: 2;
       padding: 0 24px;
       will-change: transform;
     }
@@ -131,18 +130,18 @@
     }
 
     .hero-scroll {
-          position: absolute;
-          bottom: 32px;
-          left: 50%; 
-          margin-left: -1px; 
-          z-index: 2;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 8px;
-          opacity: 0;
-          animation: fadeUpScroll 1s ease forwards 1.3s;
-        }
+      position: absolute;
+      bottom: 32px;
+      left: 50%; 
+      margin-left: -1px; 
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      opacity: 0;
+      animation: fadeUpScroll 1s ease forwards 1.3s;
+    }
 
     .hero-scroll span {
       color: rgba(255,255,255,0.3);
@@ -291,7 +290,10 @@
       line-height: 1.85;
     }
 
+    /* Fixed Image Container Scaling */
     .side-img {
+      width: 100%;
+      max-width: 500px;
       aspect-ratio: 4/3;
       border-radius: 14px;
       overflow: hidden;
@@ -300,6 +302,7 @@
       justify-content: center;
       background: var(--off-white);
       border: 1px solid var(--border);
+      justify-self: center;
     }
     .side-img img {
       width: 100%;
@@ -308,19 +311,25 @@
       display: block;
     }
 
+    /* Fixed Video Container Layout & Crop Fixes */
     .video-side {
+      width: 100%;
+      max-width: 500px;
       aspect-ratio: 4/3;
       border-radius: 14px;
       overflow: hidden;
       border: 1px solid var(--border);
       background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      justify-self: center;
     }
     .video-side video {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
-      object-position: center -350px;
     }
 
     .what-grid {
@@ -462,10 +471,10 @@
       align-items: center;
       justify-content: center;
       cursor: default;
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      transition: box-shadow 0.15s ease, transform 0.15s ease;
+      will-change: transform;
     }
     .tl-img:hover {
-      transform: scale(1.015);
       box-shadow: 0 8px 32px rgba(11,31,74,0.1);
     }
     .tl-img img {
@@ -475,12 +484,23 @@
       display: block;
     }
 
+    .tl-img-dual-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      max-width: 540px;
+      width: 100%;
+    }
+    .tl-img-dual-container .tl-img {
+      max-width: 100%;
+      aspect-ratio: 4/3;
+    }
+
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 20px;
     }
-
     .gallery-card {
       background: var(--white);
       border: 1px solid var(--border);
@@ -755,6 +775,9 @@
         grid-template-columns: 1fr;
         gap: 32px;
       }
+      .side-img, .video-side {
+        max-width: 100%;
+      }
       .what-grid {
         grid-template-columns: 1fr;
         gap: 14px;
@@ -871,6 +894,9 @@
           <p class="section-eyebrow reveal">Meet Encore</p>
           <h2 class="section-title reveal reveal-delay-1">What Does<br>Encore Do?</h2>
           <div class="section-divider reveal reveal-delay-2"></div>
+          <div class="mission-box reveal reveal-delay-3">
+            <p>Remotely Operated Vehicles (ROVs) are unmanned, highly maneuverable underwater robots controlled by a surface crew. They allow engineers and scientists to safely survey extreme ocean depths, handle delicate mechanical installations, and collect crucial scientific data in environments where human divers cannot survive.</p>
+          </div>
         </div>
         <div class="video-side reveal reveal-delay-2">
           <video src="pics/encore-action.mp4" autoplay loop muted playsinline></video>
@@ -933,7 +959,6 @@
           <div class="tl-date">Dec 2025</div>
           <div class="tl-title">Electronics Assembly</div>
           <div class="tl-desc">Three custom PCBs assembled and integrated with the Jetson Orin Nano Super. Power distribution and signal routing tested on the bench.</div>
-          <!-- <div class="tl-img"><img src="pics/build-electronics.jpeg" alt="Electronics assembly" /></div> -->
           <div class="tl-img"><span class="img-placeholder">Electronics assembly — PCBs &amp; Jetson Orin</span></div>
         </div>
 
@@ -942,18 +967,7 @@
           <div class="tl-date">Jan 2026</div>
           <div class="tl-title">First Pool Test</div>
           <div class="tl-desc">Encore hit the water for the first time. The Go-BGC float timing issue surfaced here — and was fully reworked before the next session.</div>
-          <!-- ADD PHOTO: First pool test — Encore in water -->
-          <!-- <div class="tl-img"><img src="pics/build-pool-test.jpg" alt="First pool test" /></div> -->
-          <div class="tl-img"><span class="img-placeholder">First pool test — Encore in water</span></div>
-        </div>
-
-        <div class="tl-item reveal">
-          <div class="tl-dot"></div>
-          <div class="tl-date">Feb 2026</div>
-          <div class="tl-title">Gripper &amp; Payload Integration</div>
-          <div class="tl-desc">Dual front grippers, four-fin gripper, tilted arms, flexible mechanism, and airbag system — all integrated and tested in sequence.</div>
-          <!-- <div class="tl-img"><img src="pics/build-gripper.jpeg" alt="Gripper integration" /></div> -->
-          <div class="tl-img"><span class="img-placeholder">Gripper &amp; payload integration</span></div>
+          <div class="tl-img"><img src="pics/build-pool-test.jpeg" alt="First pool test" /></div>
         </div>
 
         <div class="tl-item reveal">
@@ -961,8 +975,15 @@
           <div class="tl-date">Mar 2026</div>
           <div class="tl-title">YOLO Detection & TRIPO3D Modeling</div>
           <div class="tl-desc">Simultaneous testing of our primary automation software. Real-time object detection is handled by the YOLO model to identify underwater targets, while structured image sets are separately processed through Tripo3D to generate accurate reconstructions.</div>
-          <!-- <div class="tl-img"><img src="pics/yolo-tripo.jpeg" alt="Photogrammetry testing" /></div> -->
-          <div class="tl-img"><span class="img-placeholder">Tripo3D photogrammetry testing</span></div>
+          
+          <div class="tl-img-dual-container">
+            <div class="tl-img">
+              <img src="pics/tripo.jpeg" alt="Photogrammetry testing" />
+            </div>
+            <div class="tl-img">
+              <img src="pics/yolo.jpeg" alt="YOLO detection testing" />
+            </div>
+          </div>
         </div>
 
         <div class="tl-item reveal">
@@ -970,7 +991,6 @@
           <div class="tl-date">Apr – May 2026</div>
           <div class="tl-title">Mission Rehearsals</div>
           <div class="tl-desc">12 pool sessions. Every task timed, every payload tested, every failure documented and fixed. Full mission simulations back-to-back.</div>
-          <!-- <div class="tl-img"><img src="pics/build-rehearsal.jpeg" alt="Mission rehearsals" /></div> -->
           <div class="tl-img"><span class="img-placeholder">Mission rehearsals — full team at pool</span></div>
         </div>
 
@@ -1010,7 +1030,6 @@
         </div>
 
         <div class="gallery-card reveal reveal-delay-2">
-          <!-- <div class="gallery-img"><img src="pics/four-fin-gripper.jpeg" alt="Four-fin gripper" /></div> -->
           <div class="gallery-img"><span class="img-placeholder">Four-fin gripper</span></div>
           <div class="gallery-caption">
             <div class="gallery-caption-title">Four-Fin Gripper</div>
@@ -1051,8 +1070,7 @@
         </div>
 
         <div class="gallery-card reveal reveal-delay-3">
-          <!-- <div class="gallery-img"><img src="pics/electronics-interior.jpeg" alt="Electronics interior" /></div> -->
-          <div class="gallery-img"><span class="img-placeholder">Electronics interior</span></div>
+          <div class="gallery-img"><img src="pics/electronics.png" alt="Electronics interior" /></div>
           <div class="gallery-caption">
             <div class="gallery-caption-title">Electronics Interior</div>
             <div class="gallery-caption-text">Three custom PCBs for signal and power distribution, with a Jetson Orin Nano Super running AI vision in real time.</div>
@@ -1227,6 +1245,7 @@
       addTilt('.what-card');
       addTilt('.gallery-card');
       addTilt('.event-card');
+      addTilt('.tl-img');
     }
   </script>
 
