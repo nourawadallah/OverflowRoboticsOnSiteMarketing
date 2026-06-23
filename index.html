@@ -643,7 +643,40 @@
       .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
       .team-photo { aspect-ratio: 4/3; }
     }
-  </style>
+  
+@media (max-width: 768px) {
+  .hero-content {
+    width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+    text-align: center;
+  }
+
+  .hero-title {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-title .line1,
+  .hero-title .line2 {
+    display: block;
+    text-align: center;
+  }
+
+  .hero-eyebrow,
+  .hero-tagline,
+  .hero-sub {
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: 1.5px;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+
+</style>
 </head>
 <body>
 
@@ -792,6 +825,7 @@
           <div class="tl-date">Jun 2026</div>
           <div class="tl-title">World Championship</div>
           <div class="tl-desc">Newfoundland and Labrador, Canada. We're here.</div>
+          <div class="tl-img"><img src="pics/canada.jpeg" alt="World Championship" /></div>
         </div>
       </div>
     </div>
