@@ -23,9 +23,7 @@
       --text-dark: #0B1F4A;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
     body {
       font-family: 'Barlow', 'Inter', sans-serif;
       color: var(--text-dark);
@@ -44,7 +42,6 @@
       text-align: center;
       overflow: hidden;
     }
-
     .hero-bg {
       position: absolute;
       inset: 0;
@@ -55,20 +52,17 @@
       will-change: transform;
       transform: scale(1.08);
     }
-
     .hero-overlay {
       position: absolute;
       inset: 0;
       background: linear-gradient(to bottom, rgba(6,15,37,0.55) 0%, rgba(6,15,37,0.45) 50%, rgba(6,15,37,0.75) 100%);
     }
-
     .hero-content {
       position: relative;
       z-index: 2;
       padding: 0 24px;
       will-change: transform;
     }
-
     .hero-eyebrow {
       color: var(--teal);
       font-family: 'Barlow', sans-serif;
@@ -81,7 +75,6 @@
       transform: translateY(20px);
       animation: fadeUp 0.8s ease forwards 0.2s;
     }
-
     .hero-title {
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 800;
@@ -92,14 +85,12 @@
       text-transform: uppercase;
       margin-bottom: 16px;
     }
-
     .hero-title .line1 {
       display: block;
       opacity: 0;
       transform: translateY(40px);
       animation: fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) forwards 0.4s;
     }
-
     .hero-title .line2 {
       display: block;
       color: var(--teal);
@@ -107,7 +98,6 @@
       transform: translateY(40px);
       animation: fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) forwards 0.55s;
     }
-
     .hero-tagline {
       font-family: 'Barlow', sans-serif;
       color: rgba(255,255,255,0.55);
@@ -120,7 +110,6 @@
       transform: translateY(20px);
       animation: fadeUp 0.8s ease forwards 0.75s;
     }
-
     .hero-sub {
       color: rgba(255,255,255,0.35);
       font-size: clamp(11px, 1.3vw, 13px);
@@ -128,12 +117,11 @@
       opacity: 0;
       animation: fadeUp 0.8s ease forwards 0.9s;
     }
-
     .hero-scroll {
       position: absolute;
       bottom: 32px;
-      left: 50%; 
-      margin-left: -1px; 
+      left: 50%;
+      margin-left: -1px;
       z-index: 2;
       display: flex;
       flex-direction: column;
@@ -142,7 +130,6 @@
       opacity: 0;
       animation: fadeUpScroll 1s ease forwards 1.3s;
     }
-
     .hero-scroll span {
       color: rgba(255,255,255,0.3);
       font-size: 10px;
@@ -156,32 +143,14 @@
       animation: scrollPulse 2s ease-in-out infinite 1.5s;
     }
 
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    @keyframes fadeUpScroll {
-      to {
-        opacity: 1;
-        transform: translateX(-50%) translateY(0);
-      }
-    }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeUpScroll { to { opacity: 1; transform: translateX(-50%) translateY(0); } }
     @keyframes scrollPulse {
-      0%,100%{
-        opacity:0.4;
-        transform:scaleY(1)
-      }
-      50%{
-        opacity:1;
-        transform:scaleY(1.15)
-      }
+      0%,100%{ opacity:0.4; transform:scaleY(1) }
+      50%{ opacity:1; transform:scaleY(1.15) }
     }
 
-    .stats-bar {
-      background: var(--navy);
-    }
+    .stats-bar { background: var(--navy); }
     .stats-inner {
       max-width: 1100px;
       margin: 0 auto;
@@ -193,9 +162,7 @@
       text-align: center;
       border-right: 1px solid rgba(255,255,255,0.07);
     }
-    .stat-item:last-child {
-      border-right: none;
-    }
+    .stat-item:last-child { border-right: none; }
     .stat-num {
       font-family: 'Barlow Condensed', sans-serif;
       color: var(--white);
@@ -204,26 +171,12 @@
       line-height: 1;
       margin-bottom: 4px;
     }
-    .stat-num span {
-      color: var(--teal);
-    }
-    .stat-lbl {
-      color: #4a6a8a;
-      font-size: 11px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-    }
+    .stat-num span { color: var(--teal); }
+    .stat-lbl { color: #4a6a8a; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; }
 
-    .section {
-      padding: 96px 40px;
-    }
-    .section-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    .section-alt {
-      background: var(--off-white);
-    }
+    .section { padding: 96px 40px; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-alt { background: var(--off-white); }
 
     .section-eyebrow {
       color: var(--teal);
@@ -257,19 +210,10 @@
       transform: translateY(36px);
       transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22,1,0.36,1);
     }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .reveal-delay-1 {
-      transition-delay: 0.1s;
-    }
-    .reveal-delay-2 {
-      transition-delay: 0.2s;
-    }
-    .reveal-delay-3 {
-      transition-delay: 0.3s;
-    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
 
     .two-col {
       display: grid;
@@ -277,18 +221,13 @@
       gap: 64px;
       align-items: center;
     }
-
     .mission-box {
       background: var(--off-white);
       border-left: 4px solid var(--teal);
       border-radius: 0 12px 12px 0;
       padding: 28px 32px;
     }
-    .mission-box p {
-      color: var(--navy);
-      font-size: 17px;
-      line-height: 1.85;
-    }
+    .mission-box p { color: var(--navy); font-size: 17px; line-height: 1.85; }
 
     .side-img {
       width: 100%;
@@ -303,12 +242,7 @@
       border: 1px solid var(--border);
       justify-self: center;
     }
-    .side-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+    .side-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
     .video-side {
       width: 100%;
@@ -323,12 +257,7 @@
       justify-content: center;
       justify-self: center;
     }
-    .video-side video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+    .video-side video { width: 100%; height: 100%; object-fit: cover; display: block; }
 
     .what-grid {
       display: grid;
@@ -337,7 +266,6 @@
       margin-top: 40px;
       margin-bottom: 28px;
     }
-
     .what-card {
       background: var(--white);
       border-radius: 14px;
@@ -347,10 +275,7 @@
       transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.2s ease;
       will-change: transform;
     }
-    .what-card:hover {
-      border-color: var(--teal);
-      box-shadow: 0 12px 40px rgba(11,31,74,0.1);
-    }
+    .what-card:hover { border-color: var(--teal); box-shadow: 0 12px 40px rgba(11,31,74,0.1); }
     .what-card-label {
       color: var(--teal);
       font-family: 'Barlow', sans-serif;
@@ -360,11 +285,7 @@
       text-transform: uppercase;
       margin-bottom: 10px;
     }
-    .what-card-text {
-      color: var(--text-dark);
-      font-size: 15px;
-      line-height: 1.65;
-    }
+    .what-card-text { color: var(--text-dark); font-size: 15px; line-height: 1.65; }
 
     .impact-banner {
       background: var(--navy);
@@ -381,29 +302,12 @@
       padding-bottom: 12px;
       border-bottom: 1px solid rgba(255,255,255,0.06);
     }
-    .impact-row:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-    .impact-dot {
-      width: 6px;
-      height: 6px;
-      background: var(--teal);
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-    .impact-text {
-      color: #a8c4d8;
-      font-size: 15px;
-    }
-    .impact-text b {
-      color: var(--white);
-    }
+    .impact-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .impact-dot { width: 6px; height: 6px; background: var(--teal); border-radius: 50%; flex-shrink: 0; }
+    .impact-text { color: #a8c4d8; font-size: 15px; }
+    .impact-text b { color: var(--white); }
 
-    .timeline {
-      position: relative;
-      padding-left: 36px;
-    }
+    .timeline { position: relative; padding-left: 36px; }
     .timeline::before {
       content: '';
       position: absolute;
@@ -413,13 +317,8 @@
       width: 2px;
       background: var(--border);
     }
-    .tl-item {
-      position: relative;
-      margin-bottom: 52px;
-    }
-    .tl-item:last-child {
-      margin-bottom: 0;
-    }
+    .tl-item { position: relative; margin-bottom: 52px; }
+    .tl-item:last-child { margin-bottom: 0; }
     .tl-dot {
       position: absolute;
       left: -30px;
@@ -431,32 +330,9 @@
       border: 3px solid var(--white);
       box-shadow: 0 0 0 2px var(--teal);
     }
-    .tl-date {
-      color: var(--teal);
-      font-family: 'Barlow', sans-serif;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 5px;
-    }
-    .tl-title {
-      font-family: 'Barlow Condensed', sans-serif;
-      color: var(--navy);
-      font-size: 24px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 6px;
-    }
-    .tl-desc {
-      color: var(--text-body);
-      font-size: 15px;
-      line-height: 1.65;
-      max-width: 560px;
-      margin-bottom: 14px;
-    }
-
+    .tl-date { color: var(--teal); font-family: 'Barlow', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 5px; }
+    .tl-title { font-family: 'Barlow Condensed', sans-serif; color: var(--navy); font-size: 24px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+    .tl-desc { color: var(--text-body); font-size: 15px; line-height: 1.65; max-width: 560px; margin-bottom: 14px; }
     .tl-img {
       width: 100%;
       max-width: 540px;
@@ -472,33 +348,12 @@
       transition: box-shadow 0.15s ease, transform 0.15s ease;
       will-change: transform;
     }
-    .tl-img:hover {
-      box-shadow: 0 8px 32px rgba(11,31,74,0.1);
-    }
-    .tl-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+    .tl-img:hover { box-shadow: 0 8px 32px rgba(11,31,74,0.1); }
+    .tl-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .tl-img-dual-container { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; max-width: 540px; width: 100%; }
+    .tl-img-dual-container .tl-img { max-width: 100%; aspect-ratio: 4/3; }
 
-    .tl-img-dual-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      max-width: 540px;
-      width: 100%;
-    }
-    .tl-img-dual-container .tl-img {
-      max-width: 100%;
-      aspect-ratio: 4/3;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-    }
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
     .gallery-card {
       background: var(--white);
       border: 1px solid var(--border);
@@ -508,46 +363,12 @@
       transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.2s ease;
       will-change: transform;
     }
-    .gallery-card:hover {
-      border-color: var(--teal);
-      box-shadow: 0 16px 48px rgba(11,31,74,0.12);
-    }
-
-    .gallery-img {
-      width: 100%;
-      aspect-ratio: 4/3;
-      background: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      padding: 12px;
-    }
-    .gallery-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      display: block;
-    }
-
-    .gallery-caption {
-      padding: 16px 18px;
-      border-top: 1px solid var(--border);
-    }
-    .gallery-caption-title {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 17px;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: var(--navy);
-      letter-spacing: 0.5px;
-      margin-bottom: 5px;
-    }
-    .gallery-caption-text {
-      color: var(--text-body);
-      font-size: 13px;
-      line-height: 1.55;
-    }
+    .gallery-card:hover { border-color: var(--teal); box-shadow: 0 16px 48px rgba(11,31,74,0.12); }
+    .gallery-img { width: 100%; aspect-ratio: 4/3; background: #ffffff; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 12px; }
+    .gallery-img img { width: 100%; height: 100%; object-fit: contain; display: block; }
+    .gallery-caption { padding: 16px 18px; border-top: 1px solid var(--border); }
+    .gallery-caption-title { font-family: 'Barlow Condensed', sans-serif; font-size: 17px; font-weight: 700; text-transform: uppercase; color: var(--navy); letter-spacing: 0.5px; margin-bottom: 5px; }
+    .gallery-caption-text { color: var(--text-body); font-size: 13px; line-height: 1.55; }
 
     .team-photo {
       width: 100%;
@@ -561,104 +382,22 @@
       justify-content: center;
       margin-bottom: 35px;
     }
-    .team-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+    .team-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .team-col-stack { display: flex; flex-direction: column; gap: 20px; }
+    .team-division { background: var(--white); border: 1px solid var(--border); border-radius: 14px; padding: 24px 26px; transition: border-color 0.2s ease; }
+    .team-division:hover { border-color: var(--teal); }
+    .division-title { font-family: 'Barlow', sans-serif; color: var(--teal); font-size: 10px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+    .member { display: flex; justify-content: space-between; align-items: baseline; padding: 7px 0; border-bottom: 1px solid var(--border); }
+    .member:last-child { border-bottom: none; }
+    .member-name { color: var(--navy); font-size: 13px; font-weight: 500; }
+    .member-role { color: var(--text-body); font-size: 11px; }
+    .member-grade { color: #8aafc8; font-size: 11px; }
 
-    .team-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .team-col-stack {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .team-division {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 24px 26px;
-      transition: border-color 0.2s ease;
-    }
-    .team-division:hover {
-      border-color: var(--teal);
-    }
-    .division-title {
-      font-family: 'Barlow', sans-serif;
-      color: var(--teal);
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      margin-bottom: 16px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid var(--border);
-    }
-    .member {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      padding: 7px 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .member:last-child {
-      border-bottom: none;
-    }
-    .member-name {
-      color: var(--navy);
-      font-size: 13px;
-      font-weight: 500;
-    }
-    .member-role {
-      color: var(--text-body);
-      font-size: 11px;
-    }
-    .member-grade {
-      color: #8aafc8;
-      font-size: 11px;
-    }
-
-    .outreach-img {
-      width: 100%;
-      border-radius: 14px;
-      overflow: hidden;
-      background: var(--off-white);
-      border: 1px solid var(--border);
-      aspect-ratio: 16/9;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 28px;
-    }
-    .outreach-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .outreach-text {
-      color: var(--text-body);
-      font-size: 16px;
-      line-height: 1.85;
-      max-width: 680px;
-      margin-bottom: 40px;
-    }
-
-    .outreach-events-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-      margin-bottom: 40px;
-    }
-
+    .outreach-img { width: 100%; border-radius: 14px; overflow: hidden; background: var(--off-white); border: 1px solid var(--border); aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; margin-bottom: 28px; }
+    .outreach-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .outreach-text { color: var(--text-body); font-size: 16px; line-height: 1.85; max-width: 680px; margin-bottom: 40px; }
+    .outreach-events-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-bottom: 40px; }
     .event-card {
       background: var(--white);
       border: 1px solid var(--border);
@@ -667,190 +406,247 @@
       transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.2s ease;
       will-change: transform;
     }
-    .event-card:hover {
-      border-color: var(--teal);
-      box-shadow: 0 12px 36px rgba(11,31,74,0.1);
+    .event-card:hover { border-color: var(--teal); box-shadow: 0 12px 36px rgba(11,31,74,0.1); }
+    .event-img { width: 100%; aspect-ratio: 16/17; background: var(--off-white); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .event-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .event-caption { padding: 16px 18px; }
+    .event-caption-title { font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 700; text-transform: uppercase; color: var(--navy); margin-bottom: 5px; letter-spacing: 0.5px; }
+    .event-caption-text { color: var(--text-body); font-size: 13px; line-height: 1.5; }
+    .outreach-closing { background: var(--navy); border-radius: 14px; padding: 32px 36px; color: #a8c4d8; font-size: 17px; line-height: 1.85; font-style: italic; border-left: 4px solid var(--teal); margin-bottom: 0; }
+
+    
+    /* ═══════════════════════════════════════
+       MORPHIQ PARTNERSHIP SECTION
+    ═══════════════════════════════════════ */
+    .partnership-section {
+      margin-top: 64px;
+      padding-top: 64px;
+      border-top: 1px solid var(--border);
     }
-    .event-img {
-      width: 100%;
-      aspect-ratio: 16/17;
-      background: var(--off-white);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .partnership-eyebrow {
+      color: var(--teal);
+      font-family: 'Barlow', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .partnership-heading {
+      font-family: 'Barlow Condensed', sans-serif;
+      color: var(--navy);
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 800;
+      line-height: 1.05;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+    .partnership-divider {
+      height: 3px;
+      width: 44px;
+      background: var(--teal);
+      border-radius: 2px;
+      margin-bottom: 36px;
+    }
+    .morphiq-card {
+      background: var(--navy);
+      border-radius: 20px;
       overflow: hidden;
+      border: 1px solid rgba(91,184,212,0.15);
     }
-    .event-img img {
+
+    .morphiq-header {
+      padding: 32px 36px 24px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .morphiq-name {
+      font-family: 'Barlow Condensed', sans-serif;
+      color: var(--white);
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .morphiq-tagline {
+      color: var(--teal);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+    }
+
+    .morphiq-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+
+    .morphiq-info {
+      padding: 32px 36px;
+      border-right: 1px solid rgba(255,255,255,0.07);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .morphiq-desc {
+      color: #a8c4d8;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .morphiq-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .morphiq-pill {
+      background: rgba(91,184,212,0.1);
+      border: 1px solid rgba(91,184,212,0.25);
+      color: var(--teal);
+      border-radius: 100px;
+      padding: 5px 14px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .morphiq-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--teal);
+      color: var(--navy);
+      font-family: 'Barlow', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 12px 22px;
+      border-radius: 8px;
+      transition: background 0.2s ease, transform 0.15s ease;
+      align-self: flex-start;
+    }
+
+    .morphiq-cta:hover {
+      background: #7ecde6;
+      transform: translateY(-1px);
+    }
+
+    .morphiq-images {
+      padding: 32px 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .morphiq-img-main {
+      width: 100%;
+      max-width: 650px;      /* increased width */
+      aspect-ratio: 16 / 9;  /* changed from 4:3 */
+      border-radius: 12px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      justify-self: center;
+    }
+
+    .morphiq-img-main img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center top;
       display: block;
     }
-    .event-caption {
-      padding: 16px 18px;
-    }
-    .event-caption-title {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 16px;
-      font-weight: 700;
+
+    .morphiq-img-label {
+      color: rgba(255,255,255,0.3);
+      font-size: 11px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
-      color: var(--navy);
-      margin-bottom: 5px;
-      letter-spacing: 0.5px;
-    }
-    .event-caption-text {
-      color: var(--text-body);
-      font-size: 13px;
-      line-height: 1.5;
+      text-align: center;
     }
 
-    .outreach-closing {
-      background: var(--navy);
-      border-radius: 14px;
-      padding: 32px 36px;
-      color: #a8c4d8;
-      font-size: 17px;
-      line-height: 1.85;
-      font-style: italic;
-      border-left: 4px solid var(--teal);
+    @media (max-width: 768px) {
+      .morphiq-body {
+        grid-template-columns: 1fr;
+      }
+
+      .morphiq-info {
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.07);
+        padding: 24px 22px;
+      }
+
+      .morphiq-images {
+        padding: 24px 22px;
+      }
+
+      .morphiq-header {
+        padding: 24px 22px;
+      }
     }
+
+
+    /* ═══════════════════════════════════════ */
 
     footer {
       background: var(--navy-deep);
       padding: 64px 40px;
       text-align: center;
     }
-    .footer-logo {
-      font-family: 'Barlow Condensed', sans-serif;
-      color: var(--white);
-      font-size: clamp(22px, 3vw, 32px);
-      font-weight: 800;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      margin-bottom: 6px;
-    }
-    .footer-sub {
-      color: var(--teal);
-      font-size: 11px;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      margin-bottom: 36px;
-    }
-    .footer-divider {
-      height: 1px;
-      background: rgba(255,255,255,0.08);
-      margin: 0 auto 24px;
-      max-width: 320px;
-    }
-    .footer-bottom {
-      color: #2e4a65;
-      font-size: 12px;
-      letter-spacing: 0.5px;
-    }
-
-    .img-placeholder {
-      color: #8aafc8;
-      font-size: 13px;
-      font-style: italic;
-      text-align: center;
-      padding: 0 20px;
-    }
+    .footer-logo { font-family: 'Barlow Condensed', sans-serif; color: var(--white); font-size: clamp(22px, 3vw, 32px); font-weight: 800; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 6px; }
+    .footer-sub { color: var(--teal); font-size: 11px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 36px; }
+    .footer-divider { height: 1px; background: rgba(255,255,255,0.08); margin: 0 auto 24px; max-width: 320px; }
+    .footer-bottom { color: #2e4a65; font-size: 12px; letter-spacing: 0.5px; }
+    .img-placeholder { color: #8aafc8; font-size: 13px; font-style: italic; text-align: center; padding: 0 20px; }
 
     @media (max-width: 900px) {
-      .team-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-      .team-col-stack {
-        grid-column: span 1;
-      }
+      .team-grid { grid-template-columns: 1fr 1fr; }
+      .team-col-stack { grid-column: span 1; }
     }
-
     @media (max-width: 768px) {
-      .section {
-        padding: 64px 20px;
-      }
-      .two-col {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-      .side-img, .video-side {
-        max-width: 100%;
-      }
-      .what-grid {
-        grid-template-columns: 1fr;
-        gap: 14px;
-      }
-      .stats-inner {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .stat-item {
-        padding: 20px 16px;
-        border-bottom: 1px solid rgba(255,255,255,0.07);
-      }
-      .stat-item:nth-child(2) {
-        border-right: none;
-      }
-      .stat-item:nth-child(3), .stat-item:nth-child(4) {
-        border-bottom: none;
-      }
-      .timeline {
-        padding-left: 24px;
-      }
-      .tl-dot {
-        left: -20px;
-      }
-      .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-      }
-      .gallery-caption {
-        padding: 10px 12px;
-      }
-      .gallery-caption-title {
-        font-size: 13px;
-      }
-      .gallery-caption-text {
-        font-size: 11px;
-      }
-      .team-grid {
-        grid-template-columns: 1fr;
-      }
-      .team-col-stack {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 20px;
-      }
-      .team-col-stack .team-division {
-        flex: 1;
-        min-width: 220px;
-      }
-      .outreach-events-grid {
-        grid-template-columns: 1fr;
-      }
-      .impact-banner {
-        padding: 20px;
-      }
-      .outreach-closing {
-        padding: 22px 24px;
-        font-size: 15px;
-      }
-      footer {
-        padding: 48px 20px;
-      }
+      .section { padding: 64px 20px; }
+      .two-col { grid-template-columns: 1fr; gap: 32px; }
+      .side-img, .video-side { max-width: 100%; }
+      .what-grid { grid-template-columns: 1fr; gap: 14px; }
+      .stats-inner { grid-template-columns: repeat(2, 1fr); }
+      .stat-item { padding: 20px 16px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+      .stat-item:nth-child(2) { border-right: none; }
+      .stat-item:nth-child(3), .stat-item:nth-child(4) { border-bottom: none; }
+      .timeline { padding-left: 24px; }
+      .tl-dot { left: -20px; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .gallery-caption { padding: 10px 12px; }
+      .gallery-caption-title { font-size: 13px; }
+      .gallery-caption-text { font-size: 11px; }
+      .team-grid { grid-template-columns: 1fr; }
+      .team-col-stack { flex-direction: row; flex-wrap: wrap; gap: 20px; }
+      .team-col-stack .team-division { flex: 1; min-width: 220px; }
+      .outreach-events-grid { grid-template-columns: 1fr; }
+      .impact-banner { padding: 20px; }
+      .outreach-closing { padding: 22px 24px; font-size: 15px; }
+      footer { padding: 48px 20px; }
+      .partnership-section { margin-top: 48px; padding-top: 48px; }
     }
-
     @media (max-width: 480px) {
-      .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-      }
-      .team-photo {
-        aspect-ratio: 4/3;
-      }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .team-photo { aspect-ratio: 4/3; }
     }
   </style>
 </head>
 <body>
+
   <section class="hero">
     <div class="hero-bg" id="heroBg"></div>
     <div class="hero-overlay"></div>
@@ -946,7 +742,6 @@
       <div class="section-divider reveal reveal-delay-2"></div>
 
       <div class="timeline">
-
         <div class="tl-item reveal">
           <div class="tl-dot"></div>
           <div class="tl-date">Oct 2025</div>
@@ -954,7 +749,6 @@
           <div class="tl-desc">Full ROV concept locked in SolidWorks before a single part was cut. Every system modelled and validated digitally first.</div>
           <div class="tl-img"><img src="pics/build-cad.jpeg" alt="CAD design" /></div>
         </div>
-
         <div class="tl-item reveal">
           <div class="tl-dot"></div>
           <div class="tl-date">Nov 2025</div>
@@ -962,7 +756,6 @@
           <div class="tl-desc">Carbon fibre sheets cut and 3D-printed joints assembled into a lightweight, precise frame.</div>
           <div class="tl-img"><img src="pics/build-frame.jpeg" alt="Frame fabrication" /></div>
         </div>
-
         <div class="tl-item reveal">
           <div class="tl-dot"></div>
           <div class="tl-date">Dec 2025</div>
@@ -970,7 +763,6 @@
           <div class="tl-desc">Three custom boards designed in-house from schematic to routed layout. No off-the-shelf solutions, every trace placed by the team.</div>
           <div class="tl-img"><img src="pics/pcbs.png" alt="PCBs" /></div>
         </div>
-
         <div class="tl-item reveal">
           <div class="tl-dot"></div>
           <div class="tl-date">Jan 2026</div>
@@ -978,23 +770,16 @@
           <div class="tl-desc">Encore hit the water for the first time. The Go-BGC float timing issue surfaced here — and was fully reworked before the next session.</div>
           <div class="tl-img"><img src="pics/build-pool-test.jpeg" alt="First pool test" /></div>
         </div>
-
         <div class="tl-item reveal">
           <div class="tl-dot"></div>
           <div class="tl-date">Mar 2026</div>
-          <div class="tl-title">YOLO Detection & TRIPO3D Modeling</div>
+          <div class="tl-title">YOLO Detection &amp; TRIPO3D Modeling</div>
           <div class="tl-desc">Simultaneous testing of our primary automation software. Real-time object detection is handled by the YOLO model to identify underwater targets, while structured image sets are separately processed through Tripo3D to generate accurate reconstructions.</div>
-          
           <div class="tl-img-dual-container">
-            <div class="tl-img">
-              <img src="pics/tripo.jpeg" alt="Photogrammetry testing" />
-            </div>
-            <div class="tl-img">
-              <img src="pics/yolo.jpeg" alt="YOLO detection testing" />
-            </div>
+            <div class="tl-img"><img src="pics/tripo.jpeg" alt="Photogrammetry testing" /></div>
+            <div class="tl-img"><img src="pics/yolo.jpeg" alt="YOLO detection testing" /></div>
           </div>
         </div>
-
         <div class="tl-item reveal">
           <div class="tl-dot"></div>
           <div class="tl-date">Apr – May 2026</div>
@@ -1002,14 +787,12 @@
           <div class="tl-desc">12 pool sessions. Every task timed, every payload tested, every failure documented and fixed. Full mission simulations back-to-back.</div>
           <div class="tl-img"><img src="pics/mission-rehearsals.jpeg" alt="Mission rehearsals" /></div>
         </div>
-
         <div class="tl-item reveal">
           <div class="tl-dot"></div>
           <div class="tl-date">Jun 2026</div>
           <div class="tl-title">World Championship</div>
           <div class="tl-desc">Newfoundland and Labrador, Canada. We're here.</div>
         </div>
-
       </div>
     </div>
   </div>
@@ -1021,7 +804,6 @@
       <div class="section-divider reveal reveal-delay-2"></div>
 
       <div class="gallery-grid">
-
         <div class="gallery-card reveal">
           <div class="gallery-img"><img src="pics/encore-full.png" alt="Encore full vehicle" /></div>
           <div class="gallery-caption">
@@ -1029,7 +811,6 @@
             <div class="gallery-caption-text">Carbon fibre frame, 45×35×35 cm, 9 kg. Built for extreme cold-water and under-ice operations.</div>
           </div>
         </div>
-
         <div class="gallery-card reveal reveal-delay-1">
           <div class="gallery-img"><img src="pics/dual-gripper.png" alt="Dual front grippers" /></div>
           <div class="gallery-caption">
@@ -1037,7 +818,6 @@
             <div class="gallery-caption-text">Double-acting pneumatic pistons for connector tasks, cap removal, power connector installation, and sensor connection.</div>
           </div>
         </div>
-
         <div class="gallery-card reveal reveal-delay-2">
           <div class="gallery-img"><img src="pics/thrusters.png" alt="3D Vectored Thrusters" /></div>
           <div class="gallery-caption">
@@ -1045,7 +825,6 @@
             <div class="gallery-caption-text">Eight U2 thrusters mounted at 30 to 60 degree angles, prioritizing forward thrust. Enables 6 DOF (surge, sway, heave, roll, pitch, yaw) for high-speed, stable maneuvering.</div>
           </div>
         </div>
-
         <div class="gallery-card reveal reveal-delay-3">
           <div class="gallery-img"><img src="pics/tilted-arms.png" alt="Tilted arms" /></div>
           <div class="gallery-caption">
@@ -1053,7 +832,6 @@
             <div class="gallery-caption-text">Used to collect O-Balls. Arms tilt to match negative buoyancy, keeping balls stable during retrieval.</div>
           </div>
         </div>
-
         <div class="gallery-card reveal">
           <div class="gallery-img"><img src="pics/flexible-mechanism.png" alt="Flexible mechanism" /></div>
           <div class="gallery-caption">
@@ -1061,7 +839,6 @@
             <div class="gallery-caption-text">One-way entrance mechanism driven by a linear actuator, used to connect to the buoy anchor via fishing-rod rope.</div>
           </div>
         </div>
-
         <div class="gallery-card reveal reveal-delay-1">
           <div class="gallery-img"><img src="pics/airbag.png" alt="Airbag system" /></div>
           <div class="gallery-caption">
@@ -1069,7 +846,6 @@
             <div class="gallery-caption-text">Inflates on demand to increase buoyancy and carry heavy loads for pot retrieval tasks.</div>
           </div>
         </div>
-
         <div class="gallery-card reveal reveal-delay-2">
           <div class="gallery-img"><img src="pics/go-bgc-float.png" alt="Go-BGC float" /></div>
           <div class="gallery-caption">
@@ -1077,7 +853,6 @@
             <div class="gallery-caption-text">Non-ROV double-syringe buoyancy system for autonomous under-ice profiling, communicating via Bluetooth with the station.</div>
           </div>
         </div>
-
         <div class="gallery-card reveal reveal-delay-3">
           <div class="gallery-img"><img src="pics/electronics.png" alt="Electronics interior" /></div>
           <div class="gallery-caption">
@@ -1085,7 +860,6 @@
             <div class="gallery-caption-text">Three custom PCBs for signal and power distribution, a Cube Orange+ for navigation and control, and a Jetson Orin Nano Super running AI vision in real time.</div>
           </div>
         </div>
-
       </div>
     </div>
   </div>
@@ -1095,13 +869,10 @@
       <p class="section-eyebrow reveal">The People</p>
       <h2 class="section-title reveal reveal-delay-1">The Team</h2>
       <div class="section-divider reveal reveal-delay-2"></div>
-
       <div class="team-photo reveal">
         <img src="pics/team.jpeg" alt="Overflow Robotics team" />
       </div>
-
       <div class="team-grid">
-
         <div class="team-col-stack reveal">
           <div class="team-division">
             <div class="division-title">Chief Officers</div>
@@ -1117,7 +888,6 @@
             <div class="member"><span class="member-name">Ezz El-Din</span><span class="member-role">Mentor · G12</span></div>
           </div>
         </div>
-
         <div class="team-division reveal reveal-delay-1">
           <div class="division-title">Hardware</div>
           <div class="member"><span class="member-name">Lama Amir</span><span class="member-grade">G9</span></div>
@@ -1129,7 +899,6 @@
           <div class="member"><span class="member-name">Khalid Walid</span><span class="member-grade">G11</span></div>
           <div class="member"><span class="member-name">Saif Mohamed</span><span class="member-grade">G11</span></div>
         </div>
-
         <div class="team-division reveal reveal-delay-2">
           <div class="division-title">Software</div>
           <div class="member"><span class="member-name">Marwan El-Megharbel</span><span class="member-grade">G12</span></div>
@@ -1142,7 +911,6 @@
           <div class="member"><span class="member-name">Mohamed Ahmed</span><span class="member-grade">G12</span></div>
           <div class="member"><span class="member-name">Ahmed Osama</span><span class="member-grade">G12</span></div>
         </div>
-
         <div class="team-division reveal reveal-delay-3">
           <div class="division-title">Mechanical</div>
           <div class="member"><span class="member-name">Moez El-Din</span><span class="member-grade">G11</span></div>
@@ -1155,7 +923,6 @@
           <div class="member"><span class="member-name">Adam El-Shenawy</span><span class="member-grade">G11</span></div>
           <div class="member"><span class="member-name">Farouk El-Shenawy</span><span class="member-grade">G11</span></div>
         </div>
-
       </div>
     </div>
   </div>
@@ -1212,6 +979,49 @@
         We believe engineering should be accessible to everyone. Beyond competition, our mission
         is to grow the next generation of engineers — in Alexandria and beyond.
       </div>
+
+      
+      <div class="partnership-section">
+        <p class="partnership-eyebrow">Fabrication Partnership</p>
+        <h2 class="partnership-heading">Powered by Morphiq</h2>
+        <div class="partnership-divider"></div>
+
+        <div class="morphiq-card">
+          <div class="morphiq-header">
+            <div class="morphiq-name">Morphiq</div>
+            <div class="morphiq-tagline">3D Printing Studio &nbsp;·&nbsp; Alexandria, Egypt</div>
+          </div>
+
+          <div class="morphiq-body">
+            <div class="morphiq-info">
+              <p class="morphiq-desc">
+                Morphiq is a local Alexandria-based 3D-printing studio that supported our team during the season through rapid prototyping and additive manufacturing services. Their technical expertise and willingness to collaborate made them a valuable partner throughout our engineering journey.
+              </p>
+
+              <div class="morphiq-pills">
+                <span class="morphiq-pill">Precision Prototyping</span>
+                <span class="morphiq-pill">Additive Manufacturing</span>
+                <span class="morphiq-pill">Alexandria Studio</span>
+              </div>
+
+              <a href="https://morphiq-3d.netlify.app/" class="morphiq-cta" target="_blank">Visit Morphiq ➔</a>
+            </div>
+
+            <div class="morphiq-images">
+              <div class="morphiq-img-main">
+                <img src="pics/morphiq-work.jpeg" alt="Morphiq setup layout" />
+              </div>
+              <div class="morphiq-img-label">Workspace Overview</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
     </div>
   </div>
 
