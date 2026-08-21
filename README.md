@@ -1,6 +1,6 @@
 # Overflow Robotics — On-Site Marketing Site
 
-![Overflow Robotics' booth](./pics/marketing-display.jpeg)
+![Overflow Robotics' booth](./pics/marketing-display.jpg)
 
 A single-page companion site for Overflow Robotics' booth at the 2026 MATE ROV World Championship in Newfoundland & Labrador, Canada, accessible via QR code. It covers our mission, our ROV Encore, the build process, the team, and our community outreach.
 
